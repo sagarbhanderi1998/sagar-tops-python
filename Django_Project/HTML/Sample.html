@@ -1,0 +1,152 @@
+<html>
+<head>
+	<title>
+		Home Page
+	</title>
+	<script type="text/javascript">
+		function checkFname()
+		{
+			var f=document.frm.fname.value;
+			if(f=="")
+			{
+				document.getElementById("fname").innerHTML="Please Enter First Name";
+			}
+			else
+			{
+				document.getElementById("fname").innerHTML="";
+			}	
+		}
+	
+		function checkLname()
+		{
+			var f=document.frm.lname.value;
+			if(f=="")
+			{
+				document.getElementById("lname").innerHTML="Please Enter Last Name";
+			}
+			else
+			{
+				document.getElementById("lname").innerHTML="";
+			}	
+		}
+	
+		function checkEmail()
+		{
+			var f=document.frm.email.value;
+			if(f=="")
+			{
+				document.getElementById("Email").innerHTML="Please Enter Email";
+			}
+			else
+			{
+				document.getElementById("Email").innerHTML="";
+			}	
+		}
+		function checkMobile()
+		{
+			var f=document.frm.mobile.value;
+			if(f=="")
+			{
+				document.getElementById("mobile").innerHTML="Please Enter mobile number";
+			}
+			else
+			{
+				document.getElementById("mobile").innerHTML="";
+			}	
+		}
+		function checkaddress()
+		{
+			var f=document.frm.address.value;
+			if(f=="")
+			{
+				document.getElementById("address").innerHTML="Please Enter address";
+			}
+			else
+			{
+				document.getElementById("address").innerHTML="";
+			}	
+		}
+	</script>
+<body>
+	<form name="frm" method="post" action="">
+		<table  cellpadding="5px" cellspacing="5px">
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" name="fname" onblur="checkFname();"></td>
+				<td><span id="fname"></span></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" name="lname" onblur="checkLname();"></td>
+				<td><span id="lname"></span></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email" onblur="checkEmail();"></td>
+				<td><span id="Email"></span></td>
+				
+			</tr>
+			<tr>
+				<td>Mobile</td>
+				<td><input type="text" name="mobile" onblur="checkMobile();"></td>
+				<td><span id="mobile"></span></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><textarea rows="5" cols="22" name="address" onblur="checkaddress();"></textarea></td>
+				<td><span id="address"></span></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>
+					<input type="radio" name="gender" value="male">Male
+					<input type="radio" name="gender" value="female">Female
+				</td>
+			</tr>
+			<tr>
+				<td>Hobby</td>
+				<td>
+					<input type="checkbox" name="hobby" value="music">Music<br>
+					<input type="checkbox" name="hobby" value="cricket">Cricket<br>
+					<input type="checkbox" name="hobby" value="reading">Reading<br>
+					<input type="checkbox" name="hobby" value="traveling">Traveling
+				</td>
+			</tr>
+			<tr>
+				<td>Education</td>
+				<td>
+					<select name="education">
+						<option>---Select Education---</option>
+						<option value="10th">10th</option>
+						<option value="10th">12th</option>
+						<option value="10th">BE</option>
+						<option value="10th">BCA</option>
+						<option value="10th">BBA</option>
+						<option value="10th">ME</option>
+						<option value="10th">MCA</option>
+						<option value="10th">MBA</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Resume</td>
+				<td><input type="file" name="resume"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td><input type="password" name="cpassword"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="SUBMIT">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</head>
+</html>
